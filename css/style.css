@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Importa la fuente Poppins desde Google Fonts para su uso en el documento. */
+
+:root {
+    --primary_color: #A0D683; /* Color primario utilizado en el diseño. */
+    --secondary_color: #091057; /* Color secundario utilizado en el diseño. */
+    --hover_color: #F3C623; /* Color utilizado para efectos de hover. */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Establece la fuente general del cuerpo. */
+    background-color: #2d2e2e; /* Define el color de fondo del cuerpo como blanco. */
+}
+
+body footer {
+    font-family: 'Poppins', 'sans-serif'; /* Cambia la fuente del pie de página a Poppins. */
+}
+
+.navbar {
+    background-color: var(--secondary_color); /* Establece el color de fondo de la barra de navegación usando la variable secundaria. */
+    padding: 15px 0px; /* Espaciado vertical en la barra de navegación. */
+    box-shadow: 0 2px 10px rgba(23, 11, 3, 0.1); /* Sombra suave para la barra de navegación. */
+    transition: all 0.3s ease; /* Añade una transición suave a todos los cambios en la barra de navegación. */
+}
+
+.navbar-brand {
+    font-weight: bold; /* Texto en negrita para el nombre de la marca. */
+    color: #fff !important; /* Color blanco para el texto de la marca. */
+    font-size: 24px; /* Tamaño de fuente para la marca. */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas. */
+    letter-spacing: 1px; /* Espaciado entre letras. */
+}
+
+.nav-link {
+    color: #ecf0f1 !important; /* Color de texto para los enlaces de navegación. */
+    font-weight: 500; /* Peso de fuente semi-negrita para los enlaces. */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas. */
+    padding: 10px 15px !important; /* Espaciado interno de los enlaces. */
+    margin: 0 5px; /* Margen horizontal entre los enlaces. */
+    transition: all 0.3s ease; /* Añade una transición suave a todos los cambios en los enlaces. */
+    position: relative; /* Posiciona el elemento de manera relativa para permitir el uso de posicionamiento absoluto en elementos secundarios. */
+    display: flex; /* Utiliza flexbox para organizar el contenido. */
+    align-items: center; /* Alinea verticalmente el contenido dentro del enlace. */
+}
+
+.nav-link i {
+    margin-right: 8px; /* Espaciado a la derecha de los íconos dentro de los enlaces. */
+    font-size: 1.1em; /* Tamaño de fuente para los íconos. */
+}
+
+.nav-link::after {
+    content: ''; /* Crea un pseudo-elemento después del enlace. */
+    position: absolute; /* Posiciona el pseudo-elemento de forma absoluta. */
+    bottom: 0px; /* Lo posiciona en la parte inferior del enlace. */
+    left: 50%; /* Lo centra horizontalmente. */
+    width: 0; /* Inicialmente, el ancho es 0. */
+    height: 2px; /* Altura del subrayado. */
+    background-color: var(--hover_color); /* Color de fondo del subrayado utilizando la variable de color hover. */
+    transition: all 0.3s ease; /* Añade una transición suave al cambio de ancho. */
+}
+
+.nav-link:hover {
+    color: var(--hover_color) !important; /* Cambia el color del texto al pasar el mouse por encima. */
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Cambia el ancho del subrayado al 100% al pasar el mouse. */
+    left: 0; /* Reajusta la posición del subrayado. */
+}
+
+.navbar-toggler {
+    border-color: #fff; /* Establece el color del borde del botón de menú como blanco. */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    /* Define el ícono del botón de menú como una imagen SVG codificada. */
+}
+
+@media (max-width: 768px) {
+    /* Estilos específicos para dispositivos con un ancho máximo de 768px (pantallas pequeñas). */
+
+    .navbar-nav {
+        background-color: #387478; /* Cambia el color de fondo del menú de navegación. */
+        padding: 20px; /* Aumenta el espaciado interno. */
+        border-radius: 10px; /* Aplica bordes redondeados al menú. */
+        margin-top: 10px; /* Agrega margen superior al menú. */
+    }
+
+    .nav-link {
+        text-align: center; /* Centra el texto de los enlaces. */
+        justify-content: center; /* Justifica el contenido dentro del enlace al centro. */
+        margin: 5px 0; /* Margen vertical para los enlaces. */
+    }
+
+    .nav-link::after {
+        display: none; /* Oculta el subrayado en pantallas pequeñas. */
+    }
+
+    .footer {
+        text-align: center; /* Centra el texto dentro del pie de página. */
+    }
+
+    .social-icons {
+        margin-top: 20px; /* Agrega margen superior a los íconos sociales. */
+    }
+}
+@media (max-width: 768px) {
+    /* Estilos específicos para dispositivos con un ancho máximo de 768px (pantallas pequeñas). */
+
+    .navbar-nav {
+        background-color: #387478; /* Cambia el color de fondo del menú de navegación. */
+        padding: 20px; /* Aumenta el espaciado interno. */
+        border-radius: 10px; /* Aplica bordes redondeados al menú. */
+        margin-top: 10px; /* Agrega margen superior al menú. */
+    }
+
+    .nav-link {
+        text-align: center; /* Centra el texto de los enlaces. */
+        justify-content: center; /* Justifica el contenido dentro del enlace al centro. */
+        margin: 5px 0; /* Margen vertical para los enlaces. */
+    }
+
+    .nav-link::after {
+        display: none; /* Oculta el subrayado en pantallas pequeñas. */
+    }
+
+    .footer {
+        text-align: center; /* Centra el texto dentro del pie de página. */
+    }
+
+    .social-icons {
+        margin-top: 20px; /* Agrega margen superior a los íconos sociales. */
+    }
+}
+
+.nav-item {
+    opacity: 0; /* Inicialmente oculta los elementos de navegación. */
+    transform: translateY(-20px); /* Desplaza los elementos hacia arriba. */
+    transition: all 0.5s ease; /* Transición suave para todos los cambios. */
+}
+
+.nav-item.show {
+    opacity: 1; /* Muestra los elementos de navegación al añadir la clase 'show'. */
+    transform: translateY(0); /* Restablece la posición de los elementos. */
+}
+
+#fullWidthSlider {
+    width: 100%; /* Establece el ancho del slider a 100%. */
+    height: 500px; /* Establece la altura del slider en 500px. */
+}
+
+.carousel-item, .carousel-item img {
+    width: 100%; /* Asegura que los elementos del carrusel ocupen el ancho completo. */
+    height: 500px; /* Establece la altura de los elementos del carrusel en 500px. */
+    object-fit: cover; /* Cubre el área del contenedor sin distorsionar la imagen. */
+}
+
+* {
+    margin: 0; /* Elimina el margen predeterminado de todos los elementos. */
+    padding: 0; /* Elimina el padding predeterminado de todos los elementos. */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho y alto total de los elementos. */
+}
+
+.background {
+    padding: 25px 32px; /* Añade padding en la parte superior/inferior y laterales. */
+}
+
+
+.footer {
+    background: #121155; /* Establece el color de fondo del pie de página. */
+    color: white; /* Establece el color del texto en blanco. */
+    padding: 50px 0 20px; /* Define el espaciado interno: 50px en la parte superior, 0 en los lados, y 20px en la parte inferior. */
+    position: relative; /* Posiciona el pie de página de manera relativa. */
+    overflow: hidden; /* Oculta cualquier contenido que desborde del contenedor. */
+}
+
+.footer h5 {
+    color: #fff; /* Establece el color del texto del encabezado h5 en blanco. */
+    font-weight: 600; /* Establece el peso de la fuente a semi-negrita. */
+    margin-bottom: 20px; /* Define un margen inferior de 20px. */
+    position: relative; /* Posiciona el encabezado de manera relativa para el uso de pseudo-elementos. */
+    display: inline-block; /* Permite que el encabezado se comporte como un elemento en línea con características de bloque. */
+}
+
+.footer h5::after {
+    content: ''; /* Crea un pseudo-elemento después del encabezado h5. */
+    position: absolute; /* Posiciona el pseudo-elemento de forma absoluta. */
+    left: 0; /* Lo alinea a la izquierda del elemento padre. */
+    bottom: -5px; /* Lo posiciona 5px debajo del encabezado. */
+    width: 50px; /* Establece un ancho inicial de 50px para el pseudo-elemento. */
+    height: 2px; /* Establece una altura de 2px para el subrayado. */
+    background-color: var(--hover_color); /* Establece el color de fondo utilizando la variable de color hover. */
+    transition: width 0.3s ease; /* Transición suave para el cambio de ancho. */
+}
+
+.footer h5:hover::after {
+    width: 100%; /* Cambia el ancho del pseudo-elemento al 100% al pasar el mouse. */
+}
+
+.footer p, .footer ul {
+    color: #fff; /* Establece el color del texto para párrafos y listas en blanco. */
+    font-weight: 300; /* Establece el peso de la fuente a ligero. */
+}
+
+.social-icon {
+    font-size: 1.8rem; /* Establece el tamaño de fuente de los íconos sociales. */
+    margin-right: 20px; /* Añade un margen derecho de 20px a los íconos. */
+    color: white; /* Establece el color de los íconos en blanco. */
+    transition: all 0.3s ease; /* Transición suave para todos los cambios en los íconos. */
+}
+
+.social-icon:hover {
+    color: var(--hover_color); /* Cambia el color de los íconos al pasar el mouse. */
+    transform: translateY(-5px); /* Desplaza los íconos hacia arriba al pasar el mouse. */
+}
+
+.footer a {
+    color: var(--primary_color); /* Establece el color de los enlaces utilizando la variable de color primario. */
+    text-decoration: none; /* Elimina el subrayado de los enlaces. */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color de los enlaces. */
+}
+
+footer a:hover {
+    color: var(--hover_color); /* Cambia el color de los enlaces al pasar el mouse. */
+}
+
+.footer-links li {
+    margin-bottom: 10px; /* Define un margen inferior de 10px para los elementos de la lista en el pie de página. */
+    transition: transform 0.3s ease; /* Transición suave para los cambios de transformación. */
+}
+
+.footer-links li:hover {
+    transform: translateX(5px); /* Desplaza los elementos de la lista a la derecha al pasar el mouse. */
+}
+
+#year {
+    font-weight: bold; /* Establece el peso de la fuente a negrita para el año. */
+    color: var(--hover_color); /* Establece el color del año utilizando la variable de color hover. */
+}
+
+.copyright {
+    background-color: #387478; /* Establece el color de fondo de la sección de copyright. */
+    padding: 15px 0; /* Define el espaciado interno: 15px en la parte superior e inferior. */
+    margin-top: 30px; /* Añade un margen superior de 30px. */
+}
+
+.container {
+    text-align: center; /* Centra el contenido en línea dentro del contenedor. Esto significa que todo el texto y los elementos dentro de este contenedor estarán alineados al centro. */
+}
+
+h1 {
+    color: rgb(94, 182, 234); /* Establece el color del texto del encabezado h1 en un tono azul claro, usando el modelo de color RGB. */
+}
+
+/* Estilos para el segundo nivel de encabezado */
+h3 {
+    color: var(--hover_color); /* Establece el color del texto del encabezado h3 utilizando una variable CSS llamada --hover_color, lo que permite cambiar su valor fácilmente en un solo lugar. */
+    padding: 5px; /* Agrega un espacio interno de 5 píxeles alrededor del contenido del encabezado h3, mejorando su separación del resto del contenido. */
+}
+
+/* Estilos para el tercer nivel de encabezado */
+h5 p {
+    color: rgb(247, 88, 88); /* Establece el color del texto del párrafo dentro de un encabezado h5 en rojo. Esto aplica únicamente a los párrafos anidados dentro de h5. */
+    padding: 5px; /* Agrega un espacio interno de 5 píxeles alrededor del párrafo, asegurando que no esté pegado al borde del h5. */
+}
+
+p {
+    color: #fff; /* Establece el color del texto de todos los párrafos en blanco. Esto aplica a todos los elementos <p> en el documento. */
+}

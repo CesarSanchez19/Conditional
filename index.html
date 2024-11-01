@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!-- Definición del tipo de documento HTML -->
+
+<html lang="en">
+<!-- Apertura del elemento HTML. El atributo "lang" define el idioma del contenido. -->
+
+<head>
+    <!-- Encabezado del documento, donde se colocan los metadatos y enlaces a recursos externos. -->
+
+    <meta charset="UTF-8">
+    <!-- Definición del conjunto de caracteres utilizados en el documento. UTF-8 es un estándar universal. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Metaetiqueta para configurar la escala del diseño para dispositivos móviles. Garantiza que la página sea responsiva. -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Enlace al archivo CSS de Bootstrap desde un CDN. Bootstrap es un framework CSS para diseño responsivo. -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Enlace a la hoja de estilos de Font Awesome desde un CDN. Proporciona iconos escalables. -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Enlace a una hoja de estilos personalizada local, llamada "style.css", que probablemente contiene estilos específicos para esta página. -->
+
+    <title>Condicionales_JS</title>
+    <!-- Título de la página web que aparecerá en la pestaña del navegador. -->
+
+</head>
+<!-- Cierre del encabezado del documento -->
+
+<!-- Sesión de Menú (Navbar) -->
+
+<body>
+    <!-- Inicio del cuerpo del documento, donde se coloca el contenido visible de la página. -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <!-- Inicio de la barra de navegación (navbar) utilizando clases de Bootstrap para estilizarla como "oscura" y responsiva para dispositivos grandes. -->
+
+        <div class="container">
+            <!-- Contenedor que centraliza el contenido de la barra de navegación. -->
+
+            <a class="navbar-brand" href="#">
+                <!-- Enlace que representa la marca de la página, redirige a la página de inicio (enlace vacío "#"). -->
+                <i class="fa-solid fa-globe"></i>
+                <!-- Icono de globo terráqueo, proporcionado por Font Awesome, junto al texto de la marca. -->
+                Cesar Sanchez
+                <!-- Nombre de la marca que aparecerá en la barra de navegación. -->
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Botón para colapsar el menú en pantallas pequeñas. Usa clases de Bootstrap para su funcionalidad. -->
+                <span class="navbar-toggler-icon"></span>
+                <!-- Icono del botón de colapso (hamburguesa) de Bootstrap. -->
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Div que contiene los enlaces del menú y que será colapsable en dispositivos pequeños. -->
+
+                <ul class="navbar-nav ms-auto">
+                    <!-- Lista de elementos del menú, alineada a la derecha (ms-auto es una clase de Bootstrap para margen automático). -->
+
+                    <li class="nav-item">
+                        <!-- Primer elemento de la lista del menú. -->
+                        <a class="nav-link" href="#">
+                            <!-- Enlace a la sección de inicio. (Actualmente no redirige a ninguna parte, "#"). -->
+                            <i class="fa-solid fa-house"></i>
+                            <!-- Icono de casa de Font Awesome. -->
+                            Inicio
+                            <!-- Texto que aparece junto al icono. -->
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <!-- Segundo elemento de la lista del menú. -->
+                        <a class="nav-link" href="#">
+                            <!-- Enlace a la sección "Acerca De". -->
+                            <i class="fa-solid fa-circle-info"></i>
+                            <!-- Icono de información de Font Awesome. -->
+                            Acerca De
+                            <!-- Texto del enlace. -->
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <!-- Tercer elemento del menú, para servicios. -->
+                        <a class="nav-link" href="#">
+                            <!-- Enlace a la sección de servicios. -->
+                            <i class="fa-solid fa-gears"></i>
+                            <!-- Icono de engranajes de Font Awesome. -->
+                            Servicios
+                            <!-- Texto del enlace. -->
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <!-- Cuarto elemento del menú, para la sección de contacto. -->
+                        <a class="nav-link" href="#">
+                            <!-- Enlace a la sección de contacto. -->
+                            <i class="fa-solid fa-envelope"></i>
+                            <!-- Icono de sobre de Font Awesome (para contacto). -->
+                            Contacto
+                            <!-- Texto del enlace. -->
+                        </a>
+                    </li>
+
+                </ul>
+                <!-- Cierre de la lista de elementos del menú. -->
+            </div>
+            <!-- Cierre del contenedor colapsable del menú. -->
+        </div>
+        <!-- Cierre del contenedor de la barra de navegación. -->
+    </nav>
+    <!-- Cierre de la barra de navegación. -->
+
+    <!-- Sesión de carousel de imágenes (slider) -->
+
+    <div id="fullWidthSlider" class="carousel slide" data-bs-ride="carousel">
+        <!-- Contenedor del carrusel de imágenes. "carousel slide" son clases de Bootstrap para la funcionalidad del carrusel. El atributo "data-bs-ride" activa el carrusel automáticamente. -->
+
+        <div class="carousel-inner">
+            <!-- Contenedor de las imágenes del carrusel. -->
+
+            <div class="carousel-item active">
+                <!-- Primer ítem del carrusel. El atributo "active" indica que esta es la primera imagen que se muestra al cargar. -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi2ameQJKTqiYcVpM532dTTU7j-FQjijuatXlE-5SMKUZxNjWpl_aK2HZtfSklvDQsinM71I-m7G1NsRiKyASkPR579K4HELoHexoWq8NupqNQ-Yhj3SR54oLwmU1MrSC0BFkuBSZaC0N0/s640/condicional-multiple-javascript.png" class="d-block w-100"
+                    alt="Slider 1">
+                <!-- Imagen del primer slide del carrusel, se ajusta al 100% del ancho (w-100) y tiene un texto alternativo. -->
+            </div>
+
+            <div class="carousel-item">
+                <!-- Segundo ítem del carrusel. -->
+                <img src="https://estradawebgroup.com/ImagesUpload/File_Upload_2022113011123719_U_7.webp" class="d-block w-100"
+                    alt="Slider 2">
+                <!-- Imagen del segundo slide del carrusel. -->
+            </div>
+
+            <div class="carousel-item">
+                <!-- Tercer ítem del carrusel. -->
+                <img src="https://centrogeo.github.io/JSvis/img/js/ifElse.png" class="d-block w-100"
+                    alt="Slider 3">
+                <!-- Imagen del tercer slide del carrusel. -->
+            </div>
+
+        </div>
+        <!-- Cierre del contenedor de imágenes del carrusel. -->
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#fullWidthSlider" data-bs-slide="prev">
+            <!-- Botón para retroceder en el carrusel. Usa las clases de Bootstrap para el control de los slides. -->
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <!-- Icono de Bootstrap para el botón de retroceso. -->
+            <span class="visually-hidden"> Previous </span>
+            <!-- Texto oculto para accesibilidad, indica "anterior". -->
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#fullWidthSlider" data-bs-slide="next">
+            <!-- Botón para avanzar en el carrusel. -->
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <!-- Icono de Bootstrap para el botón de avance. -->
+            <span class="visually-hidden"> Hidden</span>
+            <!-- Texto oculto para accesibilidad, indica "siguiente". -->
+        </button>
+
+    </div>
+    
+    <div class="background">
+        <div class="container">
+        <h1>Ejercicio Practico 4. </h1> <!-- Título principal de la actividad -->
+        <h3>Condicionales en JavaScript.</h3> <!-- Subtítulo que indica el enfoque de la actividad -->
+        </div>
+    <p>
+        Este proyecto consiste en un conjunto de ejercicios en JavaScript que demuestran la implementación de estructuras condicionales para interactuar con el usuario y procesar datos. A través de una serie de entradas y evaluaciones, el programa guía al usuario para determinar su elegibilidad para conducir, compara edades, evalúa temporadas del año, califica puntuaciones académicas, y proporciona mensajes basados en condiciones específicas. Estas funcionalidades permiten al usuario entender y practicar conceptos de programación, especialmente el uso de condicionales. 
+    </p>
+
+    <h3>Tipos de Condicionales.</h3>
+
+    <p><strong>1. if:</strong> Evalúa una condición y ejecuta el bloque de código asociado si la condición es verdadera.</p>
+
+    <p><strong>2. if - else:</strong> Permite una bifurcación simple: si la condición es verdadera, se ejecuta un bloque, de lo contrario, se ejecuta otro.</p>
+
+    <p><strong>3. Switch:</strong> Compara una expresión con múltiples casos y ejecuta el bloque correspondiente al primer caso que coincide.</p>
+
+    <p>Este proyecto está diseñado para principiantes y desarrolladores intermedios que deseen fortalecer su comprensión de JavaScript a través de ejemplos prácticos y desafíos que fomenten el aprendizaje activo. A medida que avanzan, los usuarios desarrollarán habilidades esenciales que son fundamentales para la programación en JavaScript y la creación de aplicaciones web dinámicas.</p>
+    
+    <h5><p>Nota: Los resultados generados por el script pueden visualizarse en la consola del navegador. Para acceder a ella, sigue estos pasos:</p>
+
+    <p>1. Haz clic derecho en cualquier parte de la página.</p>
+    <p>2. Selecciona la opción Inspeccionar en el menú contextual.</p>
+    <p>3. Dirígete a la pestaña Consola en la parte superior del panel que se abre.</p> 
+    <p>En la consola, podrás ver todos los mensajes y resultados que se hayan producido durante la ejecución del código.</p></h5> <!-- Instrucción para ver resultados en la consola del navegador -->
+
+    <h3>Referencias:</h3>
+    <a href="https://es.stackoverflow.com/questions/374027/multiples-opciones-en-un-case-de-un-switch-javascript">multiples-opciones-en-un-case-de-un-switch-javascript</a>
+    <p></p>
+    <a href="https://es.stackoverflow.com/questions/253362/comparar-en-un-case-de-switch-en-javascript">comparar-en-un-case-de-switch-en-javascript</a>
+
+    </div>
+    
+    <!-- Sesión de encabezado de página (footer) -->
+    
+    <footer class="footer mt-auto">
+        <!-- Inicio del pie de página (footer) con la clase "footer" para estilos y "mt-auto" para margen superior automático. -->
+    
+        <div class="container">
+            <!-- Contenedor de Bootstrap que centraliza el contenido. --></p>
+    
+            <div class="row">
+                <!-- Div para la distribución en filas dentro del contenedor. -->
+    
+                <div class="col-md-4 mb-md-0">
+                    <!-- Columna del footer que ocupa 4 columnas en pantallas medianas, sin margen inferior (mb-md-0). -->
+    
+                    <h5>Acerca de mi</h5>
+                    <!-- Título de la primera sección del footer. -->
+    
+                    <p>Soy un estudiante universitario que en sus tiempos libres trata de enseñar fundamentos básicos de redes y otros temas que necesite mis compañeros de grupo o amigos, además estoy aprendiendo las bases solidas de como utilizar HTML y otros lenguajes de programación importantes.</p>
+                    <!-- Descripción personal. -->
+                </div>
+    
+                <div class="col-md-4 mb-md-0">
+                    <!-- Segunda columna del footer. -->
+    
+                    <h5>Enlaces Rápidos</h5>
+                    <!-- Título de la sección de enlaces rápidos. -->
+    
+                    <ul class="list-unstyled footer-links">
+                        <!-- Lista de enlaces sin estilo por defecto. -->
+    
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Acerca de</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <!-- Enlaces a las diferentes secciones del sitio. -->
+                    </ul>
+                </div>
+    
+                <div class="col-md-4">
+                    <!-- Tercera columna del footer. -->
+    
+                    <h5>Sígueme</h5>
+                    <!-- Título de la sección de redes sociales. -->
+    
+                    <div class="social-icons">
+                        <!-- Contenedor para los íconos sociales. -->
+    
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <!-- Íconos de redes sociales proporcionados por Font Awesome. -->
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="copyright">
+            <!-- Sección que contiene los derechos de autor. -->
+    
+            <div class="container">
+                <!-- Contenedor de Bootstrap para centrar el contenido. -->
+    
+                <div class="row">
+                    <!-- Fila para distribuir el contenido. -->
+    
+                    <div class="col-md-12 text-center">
+                        <!-- Columna de 12 unidades que centra el texto. -->
+    
+                        <p>&copy; <span id="year"></span> Desarrollado por Cesar Sanchez. TI31BIS DSM. Todos los derechos reservados.</p>
+                        <!-- Texto de derechos de autor con el año actualizado dinámicamente mediante JavaScript. -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </footer>
+    <!-- Cierre del pie de página (footer). -->
+    
+    <script src="js/exercise4.js"></script> 
+    <!-- Incluye el archivo exercise3.js desde la carpeta js, este script está activo -->
+    
+    <script src="js/script.js"></script>
+    <!-- Enlace al archivo JavaScript personalizado (script.js). -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Enlace a la biblioteca JavaScript de Bootstrap para las funcionalidades dinámicas de la página. -->
+    
+    <!--<script src="js/conditional.js"></script>-->
+    
+</body>
+</html>
