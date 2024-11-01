@@ -6,7 +6,7 @@ console.log('-----------------------------------------');
 // Ingrese su edad: 15 ----> Te faltan 3 años para conducir.
 
 // Solicita al usuario que ingrese su edad y guarda la entrada en la variable 'age'.
-let age = prompt('Escriba tu Edad', 'Escriba aqui su edad');
+let age = prompt('Ingresa su Edad: ', 'Escriba aquí su edad');
 
 // Verifica si la edad ingresada es mayor o igual a 18.
 if (age >= 18) {
@@ -36,7 +36,7 @@ console.log('-----------------------------------------');
 let myAge = 19;
 
 // Solicita al usuario que ingrese su edad y convierte la entrada a un número, guardándolo en la variable 'yourAge'.
-let yourAge = Number(prompt('Ingrese su edad', 'Escriba aqui la edad'));
+let yourAge = Number(prompt('Ingrese su edad: ', 'Escriba aquí su edad'));
 
 // Verifica si la edad ingresada por el usuario es mayor que la edad almacenada en 'myAge'.
 if (yourAge > myAge) {
@@ -102,7 +102,7 @@ console.log('-----------------------------------------');
 //Switch
 
 // Solicita al usuario que ingrese el nombre de un mes y lo almacena en la variable 'month'.
-let month = prompt('¿Cuál es la estación del año de este mes?', 'Escriba aquí el mes');
+let month = prompt('Ingrese un mes del año: ', 'Escriba aquí el mes');
 
 // Convierte el valor ingresado a minúsculas y lo almacena en la variable 'seasons' para facilitar la comparación.
 let seasons = month.toLowerCase();
